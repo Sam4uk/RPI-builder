@@ -11,9 +11,10 @@ RUN apt-get update && \
     gcc \
     g++ \
     zsh \
-    openssh-client openssh-server \
-    iputils-ping && \
+    libudev-dev libusb-1.0-0-dev \
+    pkg-config &&\
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+WORKDIR /RPI
 EXPOSE 22
